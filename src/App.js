@@ -3,7 +3,10 @@ import ToDoList from "./ToDoList";
 
 
 function App() {
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('todo list')));
+  const [tasks, setTasks] = useState(() => {
+  const saved = localStorage.getItem('todo list');
+  return saved ? JSON.parse(saved) : [];
+});
 
   const [newTask, setNewTask] = useState('');
 
