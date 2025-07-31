@@ -1,13 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "DM Sans", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toDoList, .doneList {
+  position: relative;
+  background-color: #EADDFF;
+  border-radius: 7px;
+  width: 80%;
+  max-width: 900px;
+  min-height: 100vh;
+  padding: 24px;
+  margin: 40px 10px ;
+  color: #2B1887;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+  scroll-behavior: smooth;
+}
+
+.toDoNav {
+  font-size: 28px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.addTask {
+  width: 100%;
+}
+
+.toDoForm {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.addTaskIcon {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  color: #2B1887;
+  transition: transform 0.3s ease;
+}
+
+.addTaskIcon:hover, .trashIcon:hover {
+  transform: scale(1.2);
+  color: #251b61;
+}
+
+.addtaskbox {
+  all: unset;
+  background-color: #e1d1fb;
+  border: 1px solid #dbc9f9;
+  border-radius: 5px;
+  padding: 10px;
+  height: 20px;
+  width: 100%;
+  font-weight: 545;
+}
+
+.addtaskbox::placeholder {
+  color: #2B1887; /* your desired color */
+  opacity: 1; /* make sure it's fully visible */
+}
+
+.addtaskbox:focus {
+  border-color: #d0b8f7; /* your highlight color */
+  box-shadow: 0 0 5px #d0b8f7; /* optional glow effect */
+}
+
+.addTaskLabel {
+  font-size: 28px;
+  position: absolute;
+  left: -99999999px;
+}
+
+button {
+  all: unset;
+}
+
+.checkbox {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #c09df8;
+}
+
+.taskCard {
+  width: 100%;
+}
+
+li {
+  all: unset;
+}
+
+.cardForm {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+  height: 110px;
+  
+  border-radius: 10px;
+  padding: 24px;
+  background-color: white;
+}
+
+.cardForm label {
+  font-weight: bold;
+  color: 000000;
+}
+
+.trashIcon {
+ position: absolute;
+ right: 24px;
+ transition: transform 0.3s ease;
+
+}
+
+.taskTime {
+  font-size: 0.85rem;
+  color: #b893f4;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 24px;
+  left: 17px;
+}
+
+
